@@ -482,6 +482,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "keru_layout"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bbbe4e82dc3e2aef6df4c18ef465572da803b2c6a5d21c7c03aabf9c44b4e30c"
+dependencies = [
+ "slotmap",
+]
+
+[[package]]
 name = "libc"
 version = "0.2.191"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -984,6 +993,7 @@ dependencies = [
  "backer",
  "clay-layout",
  "criterion",
+ "keru_layout",
  "morphorm",
  "ordered-float",
  "ply-engine",

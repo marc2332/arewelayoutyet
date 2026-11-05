@@ -32,6 +32,9 @@ pub mod ply_helpers;
 #[cfg(feature = "backer")]
 pub mod backer_helpers;
 
+#[cfg(feature = "keru_layout")]
+pub mod keru_layout_helpers;
+
 use criterion::measurement::WallTime;
 use criterion::{Bencher, BenchmarkGroup, Criterion, SamplingMode};
 use rand::distr::uniform::SampleRange;

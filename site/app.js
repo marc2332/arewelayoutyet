@@ -135,7 +135,7 @@ function renderBenchmarkChart(run, libraries, scenarios, hiddenLibraries) {
   const width = 1120;
   const right = width - 32;
   const laneHeight = 16;
-  const colors = { taffy: '#60a5fa', morphorm: '#c084fc', torin: '#34d399', yoga: '#fb923c', ui_layout: '#fb7185', 'clay-layout': '#facc15', 'ply-engine': '#22d3ee', backer: '#e2e8f0' };
+  const colors = { taffy: '#60a5fa', morphorm: '#c084fc', torin: '#34d399', yoga: '#fb923c', ui_layout: '#fb7185', 'clay-layout': '#facc15', 'ply-engine': '#22d3ee', backer: '#e2e8f0', keru_layout: '#a3e635' };
   const visibleLibraries = libraries.filter(library => !hiddenLibraries.has(library.id));
   const measurements = scenarios.map(scenario => {
     const nodeCount = run.node_counts?.[scenario];

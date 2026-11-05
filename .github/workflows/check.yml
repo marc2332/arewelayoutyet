@@ -24,7 +24,7 @@ jobs:
           workspaces: benchmarks
       - name: Install Yoga build dependencies
         run: sudo apt-get update && sudo apt-get install --yes libclang-dev
-      - run: cargo check --manifest-path benchmarks/Cargo.toml --locked --bench pangui --features morphorm,torin,yoga,ui-layout,clay,ply,backer
+      - run: cargo check --manifest-path benchmarks/Cargo.toml --locked --bench pangui --features morphorm,torin,yoga,ui-layout,clay,ply,backer,keru_layout
       - name: Check Clay adapter
         run: cargo test --manifest-path benchmarks/Cargo.toml --locked --lib --features clay clay_helpers::tests::translates_supported_workloads_and_computes_geometry -- --exact
       - name: Check JavaScript syntax
