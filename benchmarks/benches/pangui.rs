@@ -16,6 +16,8 @@ use taffy_benchmarks::{bench_layout, benchmark_group, BuildTree, BuildTreeExt, G
 
 #[cfg(feature = "backer")]
 use taffy_benchmarks::backer_helpers::BackerTree;
+#[cfg(feature = "cephal")]
+use taffy_benchmarks::cephal_helpers::CephalTree;
 #[cfg(feature = "clay")]
 use taffy_benchmarks::clay_helpers::ClayTree;
 #[cfg(feature = "keru_layout")]
@@ -216,6 +218,20 @@ fn benchmark_native_libraries(group: &mut BenchmarkGroup<WallTime>, name: &str, 
         let mut tree = Some(tree);
         group.bench_function(BenchmarkId::new(name, "Backer"), |b| {
             bench_layout(b, &mut tree, || unreachable!(), |tree| tree.mark_all_dirty(), |tree| tree.compute_layout())
+        });
+    }
+
+    #[cfg(feature = "cephal")]
+    {
+        let mut tree = None;
+        group.bench_function(BenchmarkId::new(name, "Cephal"), |b| {
+            bench_layout(
+                b,
+                &mut tree,
+                || CephalTree::new(root, width, height),
+                |tree| tree.mark_all_dirty(),
+                |tree| tree.compute_layout(),
+            )
         });
     }
 

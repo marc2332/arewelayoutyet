@@ -12,6 +12,7 @@ A comparison of Rust UI layout libraries:
 - [clay-rs](https://crates.io/crates/clay-layout), through Rust bindings to the C engine
 - [Ply](https://crates.io/crates/ply-engine), through its pure-Rust layout context
 - [Backer](https://crates.io/crates/backer), an independent dependency-free layout library
+- [Cephal](https://github.com/zortax/cephal), a retained CSS layout engine pinned to a Git revision
 - [keru_layout](https://crates.io/crates/keru_layout)
 
 ## What is compared?
@@ -19,6 +20,10 @@ A comparison of Rust UI layout libraries:
 **Features:** layout models, wrapping, sizing, spacing, constraints, aspect ratios, custom content measurement, and pixel-grid rounding.
 
 **Performance:** daily benchmarks of shared PanGUI workloads, adapted from Taffy's benchmark suite. Results include mean layout times, confidence intervals, and historical runs. Retained-tree engines time uncached layout computation without tree construction. Clay and Ply time their full native passes, including element declaration and render-command generation, because intrinsic sizing occurs during declaration. No commands are consumed or drawn.
+
+Cephal runs all 13 workloads serially, clearing cached answers and layout state outside timing before each pass.
+
+Keru Layout runs ten workloads, skipping automatic wrapping and in-flow margins. It uses the author's benchmark adapter unchanged, with a compact Vec-backed tree and a full solve each iteration.
 
 Backer runs seven workloads. Its input tree is rebuilt outside timing to clear private resolved state, and its full native resolve/allocation passes are timed without draw callbacks.
 

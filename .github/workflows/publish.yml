@@ -39,7 +39,7 @@ jobs:
       - name: Download release history or initialize the first run
         run: node scripts/history.mjs download
       - name: Run the shared layout workloads
-        run: cargo bench --manifest-path benchmarks/Cargo.toml --locked --bench pangui --features morphorm,torin,yoga,ui-layout,clay,ply,backer,keru_layout -- --noplot
+        run: cargo bench --manifest-path benchmarks/Cargo.toml --locked --bench pangui --features morphorm,torin,yoga,ui-layout,clay,ply,backer,cephal,keru_layout -- --noplot
       - name: Append this run to the full history
         run: node scripts/collect.mjs
       - name: Build the static site

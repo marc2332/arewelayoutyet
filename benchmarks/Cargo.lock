@@ -120,6 +120,11 @@ dependencies = [
 ]
 
 [[package]]
+name = "cephal"
+version = "0.2.0"
+source = "git+https://github.com/zortax/cephal?rev=9e77f9100ab3b2f55ade85dd5f24bb987fd28982#9e77f9100ab3b2f55ade85dd5f24bb987fd28982"
+
+[[package]]
 name = "cexpr"
 version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -991,6 +996,7 @@ name = "taffy_benchmarks"
 version = "0.1.0"
 dependencies = [
  "backer",
+ "cephal",
  "clay-layout",
  "criterion",
  "keru_layout",
