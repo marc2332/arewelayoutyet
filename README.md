@@ -12,6 +12,7 @@ A comparison of Rust UI layout libraries:
 - [clay-rs](https://crates.io/crates/clay-layout), through Rust bindings to the C engine
 - [Ply](https://crates.io/crates/ply-engine), through its pure-Rust layout context
 - [Backer](https://crates.io/crates/backer), an independent dependency-free layout library
+- [keru_layout](https://crates.io/crates/keru_layout)
 
 ## What is compared?
 

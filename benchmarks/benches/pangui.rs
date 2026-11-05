@@ -18,6 +18,8 @@ use taffy_benchmarks::{bench_layout, benchmark_group, BuildTree, BuildTreeExt, G
 use taffy_benchmarks::backer_helpers::BackerTree;
 #[cfg(feature = "clay")]
 use taffy_benchmarks::clay_helpers::ClayTree;
+#[cfg(feature = "keru_layout")]
+use taffy_benchmarks::keru_layout_helpers::KeruLayoutTree;
 #[cfg(feature = "morphorm")]
 use taffy_benchmarks::morphorm_helpers::MorphormTree;
 #[cfg(feature = "taffy03")]
@@ -213,6 +215,14 @@ fn benchmark_native_libraries(group: &mut BenchmarkGroup<WallTime>, name: &str, 
     if let Some(tree) = BackerTree::new(root, width, height) {
         let mut tree = Some(tree);
         group.bench_function(BenchmarkId::new(name, "Backer"), |b| {
+            bench_layout(b, &mut tree, || unreachable!(), |tree| tree.mark_all_dirty(), |tree| tree.compute_layout())
+        });
+    }
+
+    #[cfg(feature = "keru_layout")]
+    if let Some(tree) = KeruLayoutTree::new(root, width, height) {
+        let mut tree = Some(tree);
+        group.bench_function(BenchmarkId::new(name, "keru_layout"), |b| {
             bench_layout(b, &mut tree, || unreachable!(), |tree| tree.mark_all_dirty(), |tree| tree.compute_layout())
         });
     }
