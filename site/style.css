@@ -65,6 +65,7 @@ section[aria-labelledby="benchmark-heading"] { padding: 20px 0; }
 .benchmark-actions > * { white-space: nowrap; }
 .run-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin: 12px 0; }
 .run-toolbar p { margin: 0; }
+.chart-workload-toggle { width: 16px; height: 16px; margin: 1px; cursor: pointer; accent-color: #a1a1aa; }
 .run-selector { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0; font-size: 12px; }
 .run-selector select, .chart-mode select { max-width: 100%; padding: 6px 8px; border: 1px solid var(--line); border-radius: 4px; background: var(--panel); color: inherit; font: inherit; }
 [hidden] { display: none !important; }

@@ -35,13 +35,23 @@
         </div>
         <div class="table-scroll" tabindex="0" role="region" aria-label="Layout benchmark results"><table id="benchmark-results"></table></div>
         <figure class="benchmark-overview">
-          <figcaption id="benchmark-chart-caption" class="small" aria-live="polite">Further left is faster. The fastest visible mean per benchmark is 1×. Dots and 95% confidence bounds are divided by that fastest visible mean. The X axis is logarithmic. Missing results have no dot.</figcaption>
+          <figcaption id="benchmark-chart-caption" class="small" aria-live="polite">Further left is faster. The fastest visible mean per benchmark is 1×. Dots and 95% confidence bounds are divided by that fastest visible mean. The X axis is linear. Missing results have no dot.</figcaption>
           <label class="chart-mode small">View
             <select id="benchmark-chart-mode" aria-controls="benchmark-chart">
               <option value="relative">Relative (× fastest)</option>
               <option value="milliseconds">Milliseconds</option>
               <option value="per-node" selected>Per-node (ns/node)</option>
             </select>
+          </label>
+          <label class="chart-mode small">Scale
+            <select id="benchmark-chart-scale" aria-controls="benchmark-chart">
+              <option value="linear" selected>Linear</option>
+              <option value="log">Logarithmic</option>
+            </select>
+          </label>
+          <label id="benchmark-chart-outliers-control" class="chart-mode small">
+            <input id="benchmark-chart-outliers" type="checkbox" aria-controls="benchmark-chart">
+            Show outliers (&gt;15× fastest per workload)
           </label>
           <div id="benchmark-chart-legend" class="chart-legend" role="group" aria-label="Chart libraries, hover to highlight or click to toggle"></div>
           <div id="benchmark-chart" class="benchmark-chart" tabindex="0" role="region" aria-label="Benchmark dot plots, scroll horizontally on mobile"></div>
