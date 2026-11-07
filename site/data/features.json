@@ -3,7 +3,7 @@
   "libraries": [
     {"id": "taffy", "name": "Taffy", "version": "0.15.0 (pinned Git)", "releaseDate": "2026-10-12", "usedBy": [{"name": "Bevy", "url": "https://bevyengine.org/"}, {"name": "Zed / GPUI", "url": "https://github.com/zed-industries/zed/tree/main/crates/gpui"}, {"name": "Floem", "url": "https://github.com/lapce/floem"}, {"name": "Blitz", "url": "https://github.com/DioxusLabs/blitz"}], "url": "https://crates.io/crates/taffy", "source": "https://github.com/DioxusLabs/taffy/tree/4e59968eda29ceeb0bbaeb3993c8cd38baa3d0a6/src/style"},
     {"id": "morphorm", "name": "Morphorm", "version": "0.9.0", "releaseDate": "2026-07-17", "usedBy": [{"name": "Vizia", "url": "https://github.com/vizia/vizia"}], "url": "https://crates.io/crates/morphorm", "source": "https://docs.rs/morphorm/0.9.0/morphorm/node/trait.Node.html"},
-    {"id": "torin", "name": "Torin", "version": "0.5.0-rc.10", "releaseDate": "2026-10-11", "usedBy": [{"name": "Freya", "url": "https://freyaui.dev/"}], "url": "https://crates.io/crates/torin", "source": "https://docs.rs/torin/0.5.0-rc.10/torin/node/struct.Node.html"},
+    {"id": "torin", "name": "Torin", "version": "0.5.0", "releaseDate": "2026-10-11", "usedBy": [{"name": "Freya", "url": "https://freyaui.dev/"}], "url": "https://crates.io/crates/torin", "source": "https://docs.rs/torin/0.5.0/torin/node/struct.Node.html"},
     {"id": "yoga", "name": "yoga-rs", "version": "0.5.0 (C++ bindings)", "releaseDate": "2025-01-16", "usedBy": [{"name": "React Native", "url": "https://reactnative.dev/", "note": "Uses the C++ Yoga engine, not the Rust bindings."}], "url": "https://crates.io/crates/yoga", "source": "https://docs.rs/yoga/0.5.0/yoga/struct.Node.html"},
     {"id": "ui_layout", "name": "ui-layout (WIP 🚧)", "version": "0.12.1 (pinned Git, WIP)", "releaseDate": "2026-08-01", "usedBy": [], "url": "https://crates.io/crates/ui_layout", "source": "https://github.com/098orin/ui_layout-rs/blob/cffdbc4bc0e4f54b9a4466847528fbfa2127648a/src/style.rs"},
     {"id": "clay-layout", "name": "clay-rs", "version": "0.4.0 (C bindings)", "releaseDate": "2025-06-03", "usedBy": [], "url": "https://crates.io/crates/clay-layout", "source": "https://docs.rs/clay-layout/0.4.0/clay_layout/layout/index.html"},
@@ -30,7 +30,7 @@
       "sources": {
         "taffy": "https://github.com/DioxusLabs/taffy/blob/4e59968eda29ceeb0bbaeb3993c8cd38baa3d0a6/src/tree/taffy_tree.rs",
         "morphorm": "https://docs.rs/morphorm/0.9.0/morphorm/node/trait.Node.html#tymethod.content_size",
-        "torin": "https://docs.rs/torin/0.5.0-rc.10/torin/custom_measurer/trait.LayoutMeasurer.html",
+        "torin": "https://docs.rs/torin/0.5.0/torin/custom_measurer/trait.LayoutMeasurer.html",
         "yoga": "https://docs.rs/yoga/0.5.0/yoga/struct.Node.html#method.set_measure_func",
         "ui_layout": "https://github.com/098orin/ui_layout-rs/blob/cffdbc4bc0e4f54b9a4466847528fbfa2127648a/src/custom_layouter.rs",
         "clay-layout": "https://docs.rs/clay-layout/0.4.0/clay_layout/struct.Clay.html#method.set_measure_text_function",
@@ -48,7 +48,7 @@
       "sources": {
         "taffy": "https://github.com/DioxusLabs/taffy/blob/4e59968eda29ceeb0bbaeb3993c8cd38baa3d0a6/src/tree/taffy_tree.rs#L609-L617",
         "morphorm": "https://docs.rs/morphorm/0.9.0/src/morphorm/layout.rs.html#1349-1357",
-        "torin": "https://docs.rs/torin/0.5.0-rc.10/src/torin/measure.rs.html",
+        "torin": "https://docs.rs/torin/0.5.0/src/torin/measure.rs.html",
         "yoga": "https://docs.rs/crate/yoga/0.5.0/source/src/yoga/yoga/algorithm/PixelGrid.cpp",
         "ui_layout": "https://github.com/098orin/ui_layout-rs/blob/cffdbc4bc0e4f54b9a4466847528fbfa2127648a/src/engine.rs",
         "clay-layout": "https://docs.rs/crate/clay-layout/0.4.0/source/clay.h",
@@ -63,7 +63,7 @@
       "sources": {
         "taffy": "https://github.com/DioxusLabs/taffy/blob/4e59968eda29ceeb0bbaeb3993c8cd38baa3d0a6/src/tree/taffy_tree.rs",
         "morphorm": "https://docs.rs/morphorm/0.9.0/src/morphorm/layout.rs.html",
-        "torin": "https://docs.rs/torin/0.5.0-rc.10/torin/torin/struct.Torin.html#method.invalidate",
+        "torin": "https://docs.rs/torin/0.5.0/torin/torin/struct.Torin.html#method.invalidate",
         "yoga": "https://www.yogalayout.dev/docs/advanced/incremental-layout",
         "ui_layout": "https://github.com/098orin/ui_layout-rs/blob/cffdbc4bc0e4f54b9a4466847528fbfa2127648a/src/engine.rs",
         "clay-layout": "https://docs.rs/crate/clay-layout/0.4.0/source/clay.h",
