@@ -38,6 +38,9 @@ pub mod cephal_helpers;
 #[cfg(feature = "keru_layout")]
 pub mod keru_layout_helpers;
 
+#[cfg(feature = "hooke")]
+pub mod hooke_helpers;
+
 use criterion::measurement::WallTime;
 use criterion::{Bencher, BenchmarkGroup, Criterion, SamplingMode};
 use rand::distr::uniform::SampleRange;

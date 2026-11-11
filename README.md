@@ -14,6 +14,7 @@ A comparison of Rust UI layout libraries:
 - [Backer](https://crates.io/crates/backer), an independent dependency-free layout library
 - [Cephal](https://github.com/zortax/cephal), a retained CSS layout engine pinned to a Git revision
 - [keru_layout](https://crates.io/crates/keru_layout)
+- [hooke](https://crates.io/crates/hooke), a flexbox-only layout engine for persistent, copy-on-write trees
 
 ## What is compared?
 
@@ -22,6 +23,8 @@ A comparison of Rust UI layout libraries:
 **Performance:** daily benchmarks of shared PanGUI workloads, adapted from Taffy's benchmark suite. Results include mean layout times, confidence intervals, and historical runs. Retained-tree engines time uncached layout computation without tree construction. Clay and Ply time their full native passes, including element declaration and render-command generation, because intrinsic sizing occurs during declaration. No commands are consumed or drawn.
 
 Cephal runs all 13 workloads serially, clearing cached answers and layout state outside timing before each pass.
+
+hooke runs all 13 workloads serially, invalidating every node's layout state outside timing before each pass.
 
 Keru Layout runs ten workloads, skipping automatic wrapping and in-flow margins. It uses the author's benchmark adapter unchanged, with a compact Vec-backed tree and a full solve each iteration.
 

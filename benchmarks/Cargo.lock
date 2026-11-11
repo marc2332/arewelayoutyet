@@ -445,6 +445,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "841d1cc9bed7f9236f321df977030373f4a4163ae1a7dbfe1a51a2c1a51d9100"
 
 [[package]]
+name = "hooke"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "aa10e8868c5140bca32404d04cc832cc90071c03a6f7b04b2b3a4fdef22e5188"
+
+[[package]]
 name = "image"
 version = "0.24.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1006,6 +1012,7 @@ dependencies = [
  "cephal",
  "clay-layout",
  "criterion",
+ "hooke",
  "keru_layout",
  "morphorm",
  "ordered-float",
