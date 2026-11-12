@@ -5,7 +5,7 @@ import { execFileSync } from 'node:child_process';
 import { parseArgs } from 'node:util';
 import { readHistory, writeHistory } from './history-data.mjs';
 
-const libraries = new Map([['Taffy main', 'taffy'], ['Morphorm', 'morphorm'], ['Torin', 'torin'], ['Yoga', 'yoga'], ['ui_layout', 'ui_layout'], ['Clay', 'clay-layout'], ['Ply', 'ply-engine'], ['Backer', 'backer'], ['Cephal', 'cephal'], ['keru_layout', 'keru_layout']]);
+const libraries = new Map([['Taffy main', 'taffy'], ['Morphorm', 'morphorm'], ['Torin', 'torin'], ['Yoga', 'yoga'], ['ui_layout', 'ui_layout'], ['Clay', 'clay-layout'], ['Ply', 'ply-engine'], ['Backer', 'backer'], ['Cephal', 'cephal'], ['keru_layout', 'keru_layout'], ['hooke', 'hooke']]);
 const upstream = '4e59968eda29ceeb0bbaeb3993c8cd38baa3d0a6';
 const { values } = parseArgs({ options: {
   criterion: { type: 'string', default: 'benchmarks/target/criterion' },
@@ -39,7 +39,7 @@ const keys = results.map(result => JSON.stringify([result.scenario, result.libra
 if (new Set(keys).size !== keys.length) throw new Error('Duplicate benchmark results');
 
 const metadata = JSON.parse(execFileSync('cargo', [
-  'metadata', '--locked', '--format-version', '1', '--manifest-path', 'benchmarks/Cargo.toml', '--features', 'morphorm,torin,yoga,ui-layout,clay,ply,backer,cephal,keru_layout',
+  'metadata', '--locked', '--format-version', '1', '--manifest-path', 'benchmarks/Cargo.toml', '--features', 'morphorm,torin,yoga,ui-layout,clay,ply,backer,cephal,keru_layout,hooke',
 ], { encoding: 'utf8', maxBuffer: 16 * 1024 * 1024 }));
 const versions = Object.fromEntries(metadata.packages
   .filter(packageInfo => [...libraries.values()].includes(packageInfo.name)

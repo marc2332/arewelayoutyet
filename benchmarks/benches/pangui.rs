@@ -20,6 +20,8 @@ use taffy_benchmarks::backer_helpers::BackerTree;
 use taffy_benchmarks::cephal_helpers::CephalTree;
 #[cfg(feature = "clay")]
 use taffy_benchmarks::clay_helpers::ClayTree;
+#[cfg(feature = "hooke")]
+use taffy_benchmarks::hooke_helpers::HookeTree;
 #[cfg(feature = "keru_layout")]
 use taffy_benchmarks::keru_layout_helpers::KeruLayoutTree;
 #[cfg(feature = "morphorm")]
@@ -229,6 +231,20 @@ fn benchmark_native_libraries(group: &mut BenchmarkGroup<WallTime>, name: &str, 
                 b,
                 &mut tree,
                 || CephalTree::new(root, width, height),
+                |tree| tree.mark_all_dirty(),
+                |tree| tree.compute_layout(),
+            )
+        });
+    }
+
+    #[cfg(feature = "hooke")]
+    {
+        let mut tree = None;
+        group.bench_function(BenchmarkId::new(name, "hooke"), |b| {
+            bench_layout(
+                b,
+                &mut tree,
+                || HookeTree::new(root, width, height),
                 |tree| tree.mark_all_dirty(),
                 |tree| tree.compute_layout(),
             )
