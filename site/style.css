@@ -11,7 +11,7 @@
 }
 * { box-sizing: border-box; }
 body { margin: 0; }
-.shell { max-width: 1700px; margin: auto; padding: 0 24px; }
+.shell { max-width: 1785px; margin: auto; padding: 0 24px; }
 header { display: flex; align-items: center; min-height: 98px; }
 footer.shell { padding-bottom: 24px; }
 a { color: inherit; text-underline-offset: 4px; }
